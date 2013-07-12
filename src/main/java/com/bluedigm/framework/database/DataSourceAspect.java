@@ -39,7 +39,7 @@ public class DataSourceAspect{
 	 * @return the object
 	 * @throws Throwable the throwable
 	 */
-	@Around("execution(* com.sbsch..*Service.*(..))")
+	@Around("execution(* com.bluedigm..*Service.*(..))")
 	public Object doServiceProfiling(ProceedingJoinPoint joinPoint) throws Throwable {
 		log.debug("@Dao Service");
 
