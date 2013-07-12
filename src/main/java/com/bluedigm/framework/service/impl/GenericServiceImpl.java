@@ -49,28 +49,28 @@ public class GenericServiceImpl<T, PK extends Serializable> implements GenericSe
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.service.GenericService#get(java.io.Serializable)
+	 * @see com.bluedigm.framework.service.GenericService#get(java.io.Serializable)
 	 */
 	public T get(PK id) {
 		return null;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.service.GenericService#exists(java.io.Serializable)
+	 * @see com.bluedigm.framework.service.GenericService#exists(java.io.Serializable)
 	 */
 	public boolean exists(PK id) {
 		return false;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.service.GenericService#create(java.lang.Object)
+	 * @see com.bluedigm.framework.service.GenericService#create(java.lang.Object)
 	 */
 	public int create(T object) {
 		return 0;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.service.GenericService#modify(java.lang.Object)
+	 * @see com.bluedigm.framework.service.GenericService#modify(java.lang.Object)
 	 */
 	public void modify(T object) {
 
@@ -78,7 +78,7 @@ public class GenericServiceImpl<T, PK extends Serializable> implements GenericSe
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.service.GenericService#remove(java.io.Serializable)
+	 * @see com.bluedigm.framework.service.GenericService#remove(java.io.Serializable)
 	 */
 	public void remove(PK id) {
 

@@ -63,7 +63,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd"
 		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
 		<property name="messageInterpolator">
 			<bean
-				class="com.sbsch.cms.framework.message.MessageSourceMessageInterpolator" />
+				class="com.bluedigm.framework.message.MessageSourceMessageInterpolator" />
 		</property>
 	</bean>
 	<bean

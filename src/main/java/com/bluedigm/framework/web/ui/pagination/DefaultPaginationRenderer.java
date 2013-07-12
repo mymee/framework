@@ -27,7 +27,7 @@ public class DefaultPaginationRenderer extends AbstractPaginationRenderer {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.web.ui.pagination.AbstractPaginationRenderer#renderPagination(com.sbsch.cms.framework.web.ui.pagination.PaginationInfo, java.lang.String)
+	 * @see com.bluedigm.framework.web.ui.pagination.AbstractPaginationRenderer#renderPagination(com.bluedigm.framework.web.ui.pagination.PaginationInfo, java.lang.String)
 	 */
 	@Override
 	public String renderPagination(PaginationInfo paginationInfo,

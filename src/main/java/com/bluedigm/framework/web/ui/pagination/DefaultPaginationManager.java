@@ -30,7 +30,7 @@ public class DefaultPaginationManager implements PaginationManager{
 	}
 	
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.web.ui.pagination.PaginationManager#getRendererType(java.lang.String)
+	 * @see com.bluedigm.framework.web.ui.pagination.PaginationManager#getRendererType(java.lang.String)
 	 */
 	public PaginationRenderer getRendererType(String type) {
 		

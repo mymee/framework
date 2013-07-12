@@ -13,7 +13,7 @@ import com.bluedigm.framework.util.date.DateUtil;
 
 /**
  * <pre>
- * com.sbsch.cms.framework.util.number
+ * com.bluedigm.framework.util.number
  * 		|_NumberCheckUtil.java
  * 번호유효성체크 에 대한 Util 클래스 
  * </pre>

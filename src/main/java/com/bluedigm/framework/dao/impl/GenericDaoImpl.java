@@ -87,7 +87,7 @@ public class GenericDaoImpl<T,PK extends Serializable> extends SqlSessionDaoSupp
 //	}
 
 	/* (non-Javadoc)
- * @see com.sbsch.cms.framework.dao.GenericDao#selectOne(java.lang.String, java.lang.Object)
+ * @see com.bluedigm.framework.dao.GenericDao#selectOne(java.lang.String, java.lang.Object)
  */
 public Object selectOne(String statement, Object keys) {
 //		if (id instanceof Map) {
@@ -104,7 +104,7 @@ public Object selectOne(String statement, Object keys) {
 
 	
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.dao.GenericDao#selectList(java.lang.String)
+	 * @see com.bluedigm.framework.dao.GenericDao#selectList(java.lang.String)
 	 */
 	public List<T> selectList(String statement) {
 		
@@ -112,14 +112,14 @@ public Object selectOne(String statement, Object keys) {
 	}	
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.dao.GenericDao#selectList(java.lang.String, java.lang.Object)
+	 * @see com.bluedigm.framework.dao.GenericDao#selectList(java.lang.String, java.lang.Object)
 	 */
 	public List<T> selectList(String statement, Object keys) {
 		return getSqlSession().selectList(statement, keys);
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.dao.GenericDao#exists(java.lang.String, java.io.Serializable)
+	 * @see com.bluedigm.framework.dao.GenericDao#exists(java.lang.String, java.io.Serializable)
 	 */
 	public boolean exists(String statement, PK id) {
 		
@@ -129,7 +129,7 @@ public Object selectOne(String statement, Object keys) {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.dao.GenericDao#insert(java.lang.String, java.lang.Object)
+	 * @see com.bluedigm.framework.dao.GenericDao#insert(java.lang.String, java.lang.Object)
 	 */
 	public int insert(String statement, T object) {
 		if(object instanceof AbstractObject){
@@ -145,7 +145,7 @@ public Object selectOne(String statement, Object keys) {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.dao.GenericDao#update(java.lang.String, java.lang.Object)
+	 * @see com.bluedigm.framework.dao.GenericDao#update(java.lang.String, java.lang.Object)
 	 */
 	public int update(String statement, T object) {
 		if(object instanceof AbstractObject){
@@ -161,14 +161,14 @@ public Object selectOne(String statement, Object keys) {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.dao.GenericDao#delete(java.lang.String, java.io.Serializable)
+	 * @see com.bluedigm.framework.dao.GenericDao#delete(java.lang.String, java.io.Serializable)
 	 */
 	public int delete(String statement, PK id) {
 		return getSqlSession().delete(statement, id);
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.dao.GenericDao#delete(java.lang.String, java.lang.Object)
+	 * @see com.bluedigm.framework.dao.GenericDao#delete(java.lang.String, java.lang.Object)
 	 */
 	public int delete(String statement, T object) {
 		return getSqlSession().delete(statement, object);

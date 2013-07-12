@@ -35,7 +35,7 @@ public abstract class AbstractPaginationRenderer implements PaginationRenderer{
 	public String lastPageLabel;
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.web.ui.pagination.PaginationRenderer#renderPagination(com.sbsch.cms.framework.web.ui.pagination.PaginationInfo, java.lang.String)
+	 * @see com.bluedigm.framework.web.ui.pagination.PaginationRenderer#renderPagination(com.bluedigm.framework.web.ui.pagination.PaginationInfo, java.lang.String)
 	 */
 	public String renderPagination(PaginationInfo paginationInfo,String jsFunction){
 		

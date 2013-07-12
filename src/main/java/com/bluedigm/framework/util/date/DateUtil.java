@@ -24,7 +24,7 @@ import com.ibm.icu.util.ChineseCalendar;
 
 /**
  * <pre>
- * com.sbsch.cms.framework.util.date
+ * com.bluedigm.framework.util.date
  * 		|_DateUtil.java
  * Date 에 대한 Util 클래스
  * </pre>

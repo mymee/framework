@@ -32,7 +32,7 @@ import com.bluedigm.framework.util.email.util.MailComparator;
 public class SystemHandlerImpl implements SystemHandler {
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.util.email.folder.SystemHandler#saveInBox(com.sbsch.cms.framework.util.email.javamail.Mail, com.sbsch.cms.framework.util.email.javamail.MailContext)
+	 * @see com.bluedigm.framework.util.email.folder.SystemHandler#saveInBox(com.bluedigm.framework.util.email.javamail.Mail, com.bluedigm.framework.util.email.javamail.MailContext)
 	 */
 	public void saveInBox(Mail mail, MailContext ctx) {
 		try {
@@ -43,7 +43,7 @@ public class SystemHandlerImpl implements SystemHandler {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.util.email.folder.SystemHandler#getInBoxMails(com.sbsch.cms.framework.util.email.javamail.MailContext)
+	 * @see com.bluedigm.framework.util.email.folder.SystemHandler#getInBoxMails(com.bluedigm.framework.util.email.javamail.MailContext)
 	 */
 	public List<Mail> getInBoxMails(MailContext ctx) {
 
@@ -87,7 +87,7 @@ public class SystemHandlerImpl implements SystemHandler {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.util.email.folder.SystemHandler#getDeletedBoxMails(com.sbsch.cms.framework.util.email.javamail.MailContext)
+	 * @see com.bluedigm.framework.util.email.folder.SystemHandler#getDeletedBoxMails(com.bluedigm.framework.util.email.javamail.MailContext)
 	 */
 	public List<Mail> getDeletedBoxMails(MailContext ctx) {
 		try {
@@ -99,7 +99,7 @@ public class SystemHandlerImpl implements SystemHandler {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.util.email.folder.SystemHandler#getDraftBoxMails(com.sbsch.cms.framework.util.email.javamail.MailContext)
+	 * @see com.bluedigm.framework.util.email.folder.SystemHandler#getDraftBoxMails(com.bluedigm.framework.util.email.javamail.MailContext)
 	 */
 	public List<Mail> getDraftBoxMails(MailContext ctx) {
 		try {
@@ -111,7 +111,7 @@ public class SystemHandlerImpl implements SystemHandler {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.util.email.folder.SystemHandler#getOutBoxMails(com.sbsch.cms.framework.util.email.javamail.MailContext)
+	 * @see com.bluedigm.framework.util.email.folder.SystemHandler#getOutBoxMails(com.bluedigm.framework.util.email.javamail.MailContext)
 	 */
 	public List<Mail> getOutBoxMails(MailContext ctx) {
 		try {
@@ -123,7 +123,7 @@ public class SystemHandlerImpl implements SystemHandler {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.util.email.folder.SystemHandler#getSentBoxMails(com.sbsch.cms.framework.util.email.javamail.MailContext)
+	 * @see com.bluedigm.framework.util.email.folder.SystemHandler#getSentBoxMails(com.bluedigm.framework.util.email.javamail.MailContext)
 	 */
 	public List<Mail> getSentBoxMails(MailContext ctx) {
 		try {
@@ -149,7 +149,7 @@ public class SystemHandlerImpl implements SystemHandler {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.util.email.folder.SystemHandler#delete(com.sbsch.cms.framework.util.email.javamail.Mail, com.sbsch.cms.framework.util.email.javamail.MailContext)
+	 * @see com.bluedigm.framework.util.email.folder.SystemHandler#delete(com.bluedigm.framework.util.email.javamail.Mail, com.bluedigm.framework.util.email.javamail.MailContext)
 	 */
 	public void delete(Mail mail, MailContext ctx) {
 
@@ -164,7 +164,7 @@ public class SystemHandlerImpl implements SystemHandler {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.util.email.folder.SystemHandler#saveMail(com.sbsch.cms.framework.util.email.javamail.Mail, com.sbsch.cms.framework.util.email.javamail.MailContext)
+	 * @see com.bluedigm.framework.util.email.folder.SystemHandler#saveMail(com.bluedigm.framework.util.email.javamail.Mail, com.bluedigm.framework.util.email.javamail.MailContext)
 	 */
 	public void saveMail(Mail mail, MailContext ctx) {
 		File xmlFile = getMailXmlFile(mail.getXmlName(), ctx);
@@ -256,7 +256,7 @@ public class SystemHandlerImpl implements SystemHandler {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.util.email.folder.SystemHandler#realDelete(com.sbsch.cms.framework.util.email.javamail.Mail, com.sbsch.cms.framework.util.email.javamail.MailContext)
+	 * @see com.bluedigm.framework.util.email.folder.SystemHandler#realDelete(com.bluedigm.framework.util.email.javamail.Mail, com.bluedigm.framework.util.email.javamail.MailContext)
 	 */
 	public void realDelete(Mail mail, MailContext ctx) {
 		File xmlFile = getMailXmlFile(mail.getXmlName(), ctx);
@@ -268,7 +268,7 @@ public class SystemHandlerImpl implements SystemHandler {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.util.email.folder.SystemHandler#revert(com.sbsch.cms.framework.util.email.javamail.Mail, com.sbsch.cms.framework.util.email.javamail.MailContext)
+	 * @see com.bluedigm.framework.util.email.folder.SystemHandler#revert(com.bluedigm.framework.util.email.javamail.Mail, com.bluedigm.framework.util.email.javamail.MailContext)
 	 */
 	public void revert(Mail mail, MailContext ctx) {
 		File xmlFile = getMailXmlFile(mail.getXmlName(), ctx);
@@ -281,7 +281,7 @@ public class SystemHandlerImpl implements SystemHandler {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.util.email.folder.SystemHandler#saveSent(com.sbsch.cms.framework.util.email.javamail.Mail, com.sbsch.cms.framework.util.email.javamail.MailContext)
+	 * @see com.bluedigm.framework.util.email.folder.SystemHandler#saveSent(com.bluedigm.framework.util.email.javamail.Mail, com.bluedigm.framework.util.email.javamail.MailContext)
 	 */
 	public void saveSent(Mail mail, MailContext ctx) {
 		saveFiles(mail, ctx);
@@ -294,7 +294,7 @@ public class SystemHandlerImpl implements SystemHandler {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.util.email.folder.SystemHandler#saveOutBox(com.sbsch.cms.framework.util.email.javamail.Mail, com.sbsch.cms.framework.util.email.javamail.MailContext)
+	 * @see com.bluedigm.framework.util.email.folder.SystemHandler#saveOutBox(com.bluedigm.framework.util.email.javamail.Mail, com.bluedigm.framework.util.email.javamail.MailContext)
 	 */
 	public void saveOutBox(Mail mail, MailContext ctx) {
 		saveFiles(mail, ctx);
@@ -332,7 +332,7 @@ public class SystemHandlerImpl implements SystemHandler {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.util.email.folder.SystemHandler#saveDraftBox(com.sbsch.cms.framework.util.email.javamail.Mail, com.sbsch.cms.framework.util.email.javamail.MailContext)
+	 * @see com.bluedigm.framework.util.email.folder.SystemHandler#saveDraftBox(com.bluedigm.framework.util.email.javamail.Mail, com.bluedigm.framework.util.email.javamail.MailContext)
 	 */
 	public void saveDraftBox(Mail mail, MailContext ctx) {
 		this.saveFiles(mail, ctx);

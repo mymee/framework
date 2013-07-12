@@ -12,7 +12,7 @@
 
 	<tag>
 		<name>pagination</name>
-		<tag-class>com.sbsch.cms.framework.web.ui.PaginationTag</tag-class>
+		<tag-class>com.bluedigm.framework.web.ui.PaginationTag</tag-class>
 		<body-content>empty</body-content>
 		<description>Pagination Tag</description>
 		<attribute>

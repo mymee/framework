@@ -47,7 +47,7 @@ public class MailLoaderImpl implements MailLoader {
 	private StringBuffer bodytext = new StringBuffer();
 
 	/* (non-Javadoc)
-	 * @see com.sbsch.cms.framework.util.email.javamail.MailLoader#getMessages(com.sbsch.cms.framework.util.email.javamail.MailContext)
+	 * @see com.bluedigm.framework.util.email.javamail.MailLoader#getMessages(com.bluedigm.framework.util.email.javamail.MailContext)
 	 */
 	public List<Mail> getMessages(MailContext ctx) throws LoadMailException, MailConnectionException {
 		List<Mail> mailList = new ArrayList<Mail>();

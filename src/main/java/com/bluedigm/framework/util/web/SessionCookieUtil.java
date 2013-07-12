@@ -21,7 +21,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  * <pre>
- * com.sbsch.cms.framework.util.web
+ * com.bluedigm.framework.util.web
  * 		|_SessionCookieUtil.java
  * 세션 처리 관련 유틸리티
  * </pre>

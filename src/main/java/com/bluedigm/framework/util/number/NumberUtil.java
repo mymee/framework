@@ -17,7 +17,7 @@ import java.util.Locale;
 
 /**
  * <pre>
- * com.sbsch.cms.framework.util.number
+ * com.bluedigm.framework.util.number
  * 		|_NumberUtil.java
  * 숫자 데이터 처리 관련 유틸리티
  * </pre>

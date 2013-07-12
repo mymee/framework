@@ -71,7 +71,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd"
 		class="org.springframework.web.servlet.i18n.FixedLocaleResolver"> <property 
 		name="defaultLocale" value="ko_KR"/> </bean> -->
 
-	<bean id="localeChangeController" class="com.sbsch.cms.framework.web.LocaleChangeController"
+	<bean id="localeChangeController" class="com.bluedigm.framework.web.LocaleChangeController"
 		p:localeResolver-ref="localeResolver" />
 
 </beans>

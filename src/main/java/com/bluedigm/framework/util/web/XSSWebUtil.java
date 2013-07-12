@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 
 /**
  * <pre>
- * com.sbsch.cms.framework.util.web
+ * com.bluedigm.framework.util.web
  * 		|_XSSWebUtil.java
  * XSS 공격 취약성 방지(파라미터 문자열 교체)
  * </pre>
