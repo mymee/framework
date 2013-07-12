@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.sbsch.cms</groupId>
+	<groupId>com.bluedigm</groupId>
 	<artifactId>framework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>CMS Framework</name>
-	<description>CMS Framework</description>
+	<name>Bluedigm Framework</name>
+	<description>Bluedigm Framework</description>
 
 	<properties>
 		<module.version>0.0.1-SNAPSHOT</module.version>
@@ -21,7 +21,7 @@
 		<aspectj.version>1.7.2</aspectj.version>
 
 		<!-- Spring version -->
-		<spring.version>3.2.2.RELEASE</spring.version>
+		<spring.version>3.2.3.RELEASE</spring.version>
 
 
 		<!-- EhCache -->
@@ -75,7 +75,7 @@
 		<taglibs.version>1.1.2</taglibs.version>
 
 		<!-- Nexus -->
-		<deploy.nexus.uri>http://220.73.138.117:8081/nexus</deploy.nexus.uri>
+		<deploy.nexus.uri>http://54.250.130.68/nexus</deploy.nexus.uri>
 
 		<!-- HttpComponents -->
 		<httpcomponents.version>4.2.3</httpcomponents.version>
@@ -476,7 +476,7 @@
 		<snapshotRepository>
 			<id>nexus</id>
 			<name>nexus-snapshots</name>
-			<url>http://220.73.138.117:8081/nexus/content/repositories/snapshots</url>
+			<url>${deploy.nexus.uri}/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 </project>
