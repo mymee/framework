@@ -120,7 +120,7 @@ public class SessionCookieUtil {
 	 * @exception
 	 * @see
 	 */
-	public static void setCookie(HttpServletResponse response, String cookieNm, String cookieVal, int minute)
+	public static void setCookie(HttpServletResponse response, String cookieNm, String cookieVal, int minute, String cookiePath, String cookieDomain, Boolean flag, Boolean isHttpOnly)
 			throws UnsupportedEncodingException {
 
 		// 특정의 encode 방식을 사용해 캐릭터 라인을 application/x-www-form-urlencoded 형식으로 변환
@@ -130,8 +130,147 @@ public class SessionCookieUtil {
 		// 쿠키생성 - 쿠키의 이름, 쿠키의 값
 		Cookie cookie = new Cookie(cookieNm, cookieValue);
 
-		// 2011.10.10 보안점검 후속조치
-		cookie.setSecure(true);
+		// 쿠키의 유효시간 설정
+		cookie.setMaxAge(60 * minute);
+
+		// 어플리케이션 범위로 생성
+		cookie.setPath(cookiePath);
+		
+		//도메인 간 공유 쿠키 생성 ()
+		cookie.setDomain(cookieDomain);
+		
+		cookie.setSecure(flag);
+		
+		cookie.setHttpOnly(isHttpOnly);
+		// response 내장 객체를 이용해 쿠키를 전송
+		response.addCookie(cookie);
+	}
+	
+	/**
+	 * 쿠키생성 - 입력받은 분만큼 쿠키를 유지되도록 세팅한다. 쿠키의 유효시간을 5분으로 설정 =>(cookie.setMaxAge(60
+	 * * 5) 쿠키의 유효시간을 10일로 설정 =>(cookie.setMaxAge(60 * 60 * 24 * 10)
+	 * 
+	 * @param response - Response
+	 * @param cookieNm - 쿠키명
+	 * @param cookieValue - 쿠키값
+	 * @param minute - 지속시킬 시간(분)
+	 * @return
+	 * @exception
+	 * @see
+	 */
+	public static void setCookie(HttpServletResponse response, String cookieNm, String cookieVal, int minute, String cookiePath, String cookieDomain, Boolean flag)
+			throws UnsupportedEncodingException {
+
+		// 특정의 encode 방식을 사용해 캐릭터 라인을 application/x-www-form-urlencoded 형식으로 변환
+		// 일반 문자열을 웹에서 통용되는 'x-www-form-urlencoded' 형식으로 변환하는 역할
+		String cookieValue = URLEncoder.encode(cookieVal, "utf-8");
+
+		// 쿠키생성 - 쿠키의 이름, 쿠키의 값
+		Cookie cookie = new Cookie(cookieNm, cookieValue);
+
+		// 쿠키의 유효시간 설정
+		cookie.setMaxAge(60 * minute);
+
+		// 어플리케이션 범위로 생성
+		cookie.setPath(cookiePath);
+		
+		//도메인 간 공유 쿠키 생성 ()
+		cookie.setDomain(cookieDomain);
+		
+		cookie.setSecure(flag);
+		
+		// response 내장 객체를 이용해 쿠키를 전송
+		response.addCookie(cookie);
+	}
+	
+	/**
+	 * 쿠키생성 - 입력받은 분만큼 쿠키를 유지되도록 세팅한다. 쿠키의 유효시간을 5분으로 설정 =>(cookie.setMaxAge(60
+	 * * 5) 쿠키의 유효시간을 10일로 설정 =>(cookie.setMaxAge(60 * 60 * 24 * 10)
+	 * 
+	 * @param response - Response
+	 * @param cookieNm - 쿠키명
+	 * @param cookieValue - 쿠키값
+	 * @param minute - 지속시킬 시간(분)
+	 * @return
+	 * @exception
+	 * @see
+	 */
+	public static void setCookie(HttpServletResponse response, String cookieNm, String cookieVal, int minute, String cookiePath, String cookieDomain)
+			throws UnsupportedEncodingException {
+
+		// 특정의 encode 방식을 사용해 캐릭터 라인을 application/x-www-form-urlencoded 형식으로 변환
+		// 일반 문자열을 웹에서 통용되는 'x-www-form-urlencoded' 형식으로 변환하는 역할
+		String cookieValue = URLEncoder.encode(cookieVal, "utf-8");
+
+		// 쿠키생성 - 쿠키의 이름, 쿠키의 값
+		Cookie cookie = new Cookie(cookieNm, cookieValue);
+
+		// 쿠키의 유효시간 설정
+		cookie.setMaxAge(60 * minute);
+
+		// 어플리케이션 범위로 생성
+		cookie.setPath(cookiePath);
+		
+		//도메인 간 공유 쿠키 생성 ()
+		cookie.setDomain(cookieDomain);
+		
+		// response 내장 객체를 이용해 쿠키를 전송
+		response.addCookie(cookie);
+	}
+	
+	/**
+	 * 쿠키생성 - 입력받은 분만큼 쿠키를 유지되도록 세팅한다. 쿠키의 유효시간을 5분으로 설정 =>(cookie.setMaxAge(60
+	 * * 5) 쿠키의 유효시간을 10일로 설정 =>(cookie.setMaxAge(60 * 60 * 24 * 10)
+	 * 
+	 * @param response - Response
+	 * @param cookieNm - 쿠키명
+	 * @param cookieValue - 쿠키값
+	 * @param minute - 지속시킬 시간(분)
+	 * @return
+	 * @exception
+	 * @see
+	 */
+	public static void setCookie(HttpServletResponse response, String cookieNm, String cookieVal, int minute, String cookiePath)
+			throws UnsupportedEncodingException {
+
+		// 특정의 encode 방식을 사용해 캐릭터 라인을 application/x-www-form-urlencoded 형식으로 변환
+		// 일반 문자열을 웹에서 통용되는 'x-www-form-urlencoded' 형식으로 변환하는 역할
+		String cookieValue = URLEncoder.encode(cookieVal, "utf-8");
+
+		// 쿠키생성 - 쿠키의 이름, 쿠키의 값
+		Cookie cookie = new Cookie(cookieNm, cookieValue);
+
+		// 쿠키의 유효시간 설정
+		cookie.setMaxAge(60 * minute);
+
+		// 어플리케이션 범위로 생성
+		cookie.setPath(cookiePath);
+		
+		// response 내장 객체를 이용해 쿠키를 전송
+		response.addCookie(cookie);
+	}
+	
+	/**
+	 * 쿠키생성 - 입력받은 분만큼 쿠키를 유지되도록 세팅한다. 쿠키의 유효시간을 5분으로 설정 =>(cookie.setMaxAge(60
+	 * * 5) 쿠키의 유효시간을 10일로 설정 =>(cookie.setMaxAge(60 * 60 * 24 * 10)
+	 * 
+	 * @param response - Response
+	 * @param cookieNm - 쿠키명
+	 * @param cookieValue - 쿠키값
+	 * @param minute - 지속시킬 시간(분)
+	 * @return
+	 * @exception
+	 * @see
+	 */
+	public static void setCookie(HttpServletResponse response, String cookieNm, String cookieVal, int minute)
+			throws UnsupportedEncodingException {
+
+		// 특정의 encode 방식을 사용해 캐릭터 라인을 application/x-www-form-urlencoded 형식으로 변환
+		// 일반 문자열을 웹에서 통용되는 'x-www-form-urlencoded' 형식으로 변환하는 역할
+		String cookieValue = URLEncoder.encode(cookieVal, "utf-8");
+
+		// 쿠키생성 - 쿠키의 이름, 쿠키의 값
+		Cookie cookie = new Cookie(cookieNm, cookieValue);
 
 		// 쿠키의 유효시간 설정
 		cookie.setMaxAge(60 * minute);
@@ -160,9 +299,6 @@ public class SessionCookieUtil {
 
 		// 쿠키생성
 		Cookie cookie = new Cookie(XSSWebUtil.removeCRLF(cookieNm), XSSWebUtil.removeCRLF(cookieValue));
-
-		// 2011.10.10 보안점검 후속조치
-		cookie.setSecure(true);
 
 		// response 내장 객체를 이용해 쿠키를 전송
 		response.addCookie(cookie);
@@ -219,9 +355,6 @@ public class SessionCookieUtil {
 
 		// 쿠키생성 - 쿠키의 이름, 쿠키의 값
 		Cookie cookie = new Cookie(XSSWebUtil.removeCRLF(cookieNm), null);
-
-		// 2011.10.10 보안점검 후속조치
-		cookie.setSecure(true);
 
 		// 쿠키를 삭제하는 메소드가 따로 존재하지 않음
 		// 쿠키의 유효시간을 0으로 설정해 줌으로써 쿠키를 삭제하는 것과 동일한 효과
